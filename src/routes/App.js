@@ -4,6 +4,7 @@ import Home from "../container/Home";
 import Login from "../container/Login";
 import Register from "../container/Register";
 import NotFound from "../container/NotFound";
+//El componente layout es la plantilla maestra, donde está el header y el footer
 import Layout from "../components/Layout";
 
 const App = () => (
