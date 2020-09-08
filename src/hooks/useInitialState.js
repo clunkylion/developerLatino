@@ -1,16 +1,2 @@
-import { useState, useEffect } from "react";
-const useInitialState = (API) => {
-  //custom hooks
-  const [videos, setVideos] = useState({
-    mylist: [],
-    trends: [],
-    originals: [],
-  });
-  useEffect(() => {
-    fetch(API)
-      .then((response) => response.json())
-      .then((data) => setVideos(data));
-  }, []);
-  return videos;
-};
-export default useInitialState;
+let name = ["jose", "pepe"];
+let searchName = nam

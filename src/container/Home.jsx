@@ -1,6 +1,9 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable import/no-named-as-default */
 import React from "react";
 import { connect } from "react-redux";
 import Search from "../components/Search";
+import Header from "../components/Header";
 import Categories from "../components/Categories";
 import Carousel from "../components/Carousel";
 import CarouselItem from "../components/Carouselitem";
@@ -12,16 +15,13 @@ const Home = ({ mylist, trends, originals }) => {
   //const initialState = useInitialState(API);
   return (
     <>
-      <Search />
+      <Header />
+      <Search isHome />
       {mylist.length > 0 && (
         <Categories title="Mi lista">
           <Carousel>
             {mylist.map((item) => (
-              <CarouselItem 
-              key={`${item.id}_mylist`}
-               {...item} 
-               isList
-                />
+              <CarouselItem key={`${item.id}_mylist`} {...item} isList />
             ))}
           </Carousel>
         </Categories>
